@@ -100,7 +100,7 @@ const registerUser = async (req, res) => {
       otpExpiry, // Save OTP expiry time
     });
     await newUser.save();
-    
+    console.log(req.body);
     await sendMail(email, body, "Welcome to Inventory Management System");
     res.status(201).json({ message: "User registered successfully. Please check your email for the OTP." });
   } catch (error) {
