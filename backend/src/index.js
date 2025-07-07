@@ -21,7 +21,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN ||"http://localhost:5173",
+    origin: process.env.CORS_ORIGIN ||"https://inventory-frontend-three-zeta.vercel.app",
     credentials: true,
   })
 );
