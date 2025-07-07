@@ -16,15 +16,15 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+app.use(cors({
+  origin: 'https://inventory-frontend-three-zeta.vercel.app', // your GitHub Pages frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 // Serve the uploads folder statically
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN ||"https://inventory-frontend-three-zeta.vercel.app",
-    credentials: true,
-  })
-);
 
 const PORT = process.env.PORT || 5000;
 
