@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors({
-  origin: 'https://inventory-frontend-qgvxoh8rr-raunak-saigals-projects.vercel.app', // your GitHub Pages frontend
+  origin: 'https://inventory-frontend-steel-alpha.vercel.app', // your GitHub Pages frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
